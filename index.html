@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tauri App</title>
+    <script type="module" src="/main.js" defer></script>
+   
+    <style>
+      .logo.vanilla:hover {
+        filter: drop-shadow(0 0 2em #ffe21c);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="thickT">
+        <!--<select name="epthick" id="epthick" ">-->
+          <output for="range" id="output">thickness</output>
+          <input id="range" type="range" step="1" value="50"onChange="tThick(this.value);">
+      </div>
+      <button onClick=download()>Download</button>
+      
+      <div id="thickO">
+        
+        <input id="opak" onchange="tOpak(this.value);" data-jscolor="{ value: '#33AACC80', backgroundColor: '#333', shadowColor: '#FFFFFF80', width: 121, height: 121 }"> 
+      </div>
+      
+      <svg xmlns="http://www.w3.org/2000/svg"></svg>
+    
+      <script src="draw.js"></script>
+      <script src="jscolor.js"></script>
+
+      <p id="greet-msg"></p>
+    </div>
+  </body>
+</html>
